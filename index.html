@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Calculator</title>
+	
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script>
+		function CalcNumbers(x){
+			CalcButton.display.value = CalcButton.display.value + x;
+		}
+	</script>
+
+</head>
+<body>
+	<h1>Calculator</h1>
+	<div class="Calculator">
+		<form name="CalcButton">
+			<input class="form-control mainbar" type="text" placeholder="0" name="display">
+			<div class="button-area">
+				<div class="line">
+					<input type="button" class="btn btn-warning" name="btn" value="C" onclick="display.value = null">
+					<input type="button" class="btn btn-warning" name="btn" value="Del" onclick="display.value = display.value.slice(0,-1)">
+					<input type="button" class="btn btn-warning" name="btn" value="%" onclick="CalcNumbers(this.value)">
+					<input type="button" class="btn btn-warning" name="btn" value="/" onclick="CalcNumbers(this.value)">
+				</div>
+				
+				<div class="line">
+					<input type="button" class="btn btn-light" name="btn" value="7" onclick="CalcNumbers(this.value)">
+					<input type="button" class="btn btn-light" name="btn" value="8" onclick="CalcNumbers(this.value)">
+					<input type="button" class="btn btn-light" name="btn" value="9" onclick="CalcNumbers(this.value)">
+					<input type="button" class="btn btn-warning" name="btn" value="*" onclick="CalcNumbers(this.value)">
+				</div>
+
+				<div class="line">
+					<input type="button" class="btn btn-light" name="btn" value="4" onclick="CalcNumbers(this.value)">
+					<input type="button" class="btn btn-light" name="btn" value="5" onclick="CalcNumbers(this.value)">
+					<input type="button" class="btn btn-light" name="btn" value="6" onclick="CalcNumbers(this.value)">
+					<input type="button" class="btn btn-warning" name="btn" value="-" onclick="CalcNumbers(this.value)">
+				</div>
+
+				<div class="line">
+					<input type="button" class="btn btn-light" name="btn" value="1" onclick="CalcNumbers(this.value)">
+					<input type="button" class="btn btn-light" name="btn" value="2" onclick="CalcNumbers(this.value)">
+					<input type="button" class="btn btn-light" name="btn" value="3" onclick="CalcNumbers(this.value)">
+					<input type="button" class="btn btn-warning" name="btn" value="+" onclick="CalcNumbers(this.value)">
+				</div>
+
+				<div class="last">
+					<input type="button" class="btn btn-light" name="btn" value="0" onclick="CalcNumbers(this.value)">
+					<input type="button" class="btn btn-light" name="btn" value="." onclick="CalcNumbers(this.value)">
+					<input type="button" class="btn btn-warning" name="btn" value="=" onclick="display.value = eval(display.value)">
+					
+				</div>
+ 
+			</div>
+		</form>
+		
+	</div>
+
+
+
+
+
+</body>
+</html>
